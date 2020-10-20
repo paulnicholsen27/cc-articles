@@ -38,9 +38,11 @@ class Magazine
   end
 
   def contributing_authors
-    contributors.detect do |e|
+    
+    contributors.find_all do |e|
       contributors.count(e) > 2
-    end
+            
+      end.uniq
       
       
   end

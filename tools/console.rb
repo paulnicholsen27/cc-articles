@@ -48,7 +48,7 @@ puts "Returns an array strings of the titles of all articles written for that ma
 puts web_dev.article_titles.include?("AI new paradigms")
 
 puts "Returns an array of authors who have written more than 2 articles for the magazine"
-#puts web_dev.contributing_authors.include?(joe)
+puts web_dev.contributing_authors == joe
 
 
 ### DO NOT REMOVE THIS
