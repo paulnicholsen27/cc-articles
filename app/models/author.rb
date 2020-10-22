@@ -10,15 +10,12 @@ class Author
   def articles
     Article.all.select do |articles|
       articles.author == self
-    end.map do |articles|
-      articles
     end
   end  
 
   def magazines
-      self.articles.map do |magazines|
-        #binding.pry
-        magazines.magazine
+      self.articles.map do |article|
+        article.magazine
       end.uniq
   end
 
