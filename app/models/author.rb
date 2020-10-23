@@ -19,7 +19,7 @@ class Author
 
   def magazines
     self.articles.map do |article|
-      article.magazine.name
+      article.magazine
       end.uniq
   end
 

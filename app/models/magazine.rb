@@ -14,7 +14,7 @@ class Magazine
       articles.magazine == self
    end.map do |articles|
     articles.author
-   end.uniq
+   end
   end
 
   def self.all
@@ -27,5 +27,16 @@ class Magazine
     end
   end
 
+  def articles_titles
+    Article.all.select do |article|
+      article.magazine == self
+    end.map do |article|
+      article.title
+    end
+  end
+
+  def contributing_authors
+    self.contributors.select{ |article| contributors.count(article) > 1 }
+  end
 
 end
