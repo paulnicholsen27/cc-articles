@@ -14,9 +14,27 @@ class Author
 
   def articles 
     Article.all.select do |article|
-      article == self 
+      article.author == self 
     end 
   end 
 
+  def magazines
+    articles.select do |article|
+      article.author == self
+        article.magazine
+    end 
+  end 
+
+  def add_article(magazine, title)
+    new_article = Article.new(self, magazine, title)
+  end 
+
+  def topic_areas
+    articles.select do |article|
+      article.author == self
+       article.magazine.category  
+    end 
+
+  end 
 
 end
