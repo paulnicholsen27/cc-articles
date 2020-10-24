@@ -36,10 +36,11 @@ class Magazine
   end 
 
   def contributing_authors
-    contributors.select do |author|
-      author.title.count < 2
-        author.author
-    binding.pry
-    end 
-  end 
+      x = contributors.map do |author|
+       author.author.name
+      end     ##  i think this works able halfway. 
+              ## couldnt count the magazine related only to that author 
+      x.count > 2
+      # binding.pry     
+   end 
 end

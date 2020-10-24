@@ -16,23 +16,37 @@ mag3 = Magazine.new("Flatiron School", "Education")
 article1 = Article.new(aaron, mag1, "2020 NFL Draft picks")
 article2 = Article.new(aaron, mag2, "Take Better Care of Your Cat")
 article3 = Article.new(matt, mag3, "Software Engineering")
+article4 = Article.new(aaron, mag3, "Software Engineering")
 #=====I tested everything inside the binding.pry =====
-# puts aaron.name == "Aaron Dorito"
-# puts mag1.name   
-# puts mag3.category
-# puts Magazine.all 
-# puts article1.title
-# puts Article.all 
-# puts article2.authors
-# puts article3.magazines
-# puts aaron.articles
-# puts matt.magazines
-# mag1.contributors
-# puts jerry.add_article(mag2, "Feeding Times For Cats")
-# puts aaron.topic_areas
-# puts Magazine.find_by_name("NFL 2020")
-# mag1.article_titles
-mag2.contributing_authors
+puts "testing author name returns Arron Dorito"
+puts aaron.name == "Aaron Dorito"
+puts "magazine name NFL 2020"
+puts mag1.name   
+puts " magazine category Education"
+puts mag3.category
+puts "shows all magazines"
+puts Magazine.all 
+puts "article returns title NFL 202 Draft picks"
+puts article1.title
+puts "shows all article instances"
+puts Article.all 
+puts "article authors"
+puts article2.authors
+puts "article magazine flatiron school education"
+puts article3.magazines
+puts " arrons articles "
+puts aaron.articles
+puts " matts magazines"
+puts matt.magazines
+puts " NFL 202 sports author"
+puts mag1.contributors
+puts "adds new article"
+pp jerry.add_article(mag2, "Feeding Times For Cats")
+puts aaron.topic_areas
+puts Magazine.find_by_name("NFL 2020")
+puts mag1.article_titles
+puts mag1.contributing_authors
+
 
 
 
@@ -48,6 +62,6 @@ mag2.contributing_authors
 
 
 ### DO NOT REMOVE THIS
-binding.pry
+# binding.pry
 
-0
+# 0
